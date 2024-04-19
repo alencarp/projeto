@@ -7,7 +7,7 @@
 /* html */
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-desktop.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -18,7 +18,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-desktop-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.1);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -38,7 +38,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /* border: 3px solid red; */
   margin: 56px auto 0px; /* 56px em cima, auto na direita e esquerda e 0px embaixo */
 
@@ -77,18 +78,18 @@ body * {
 }
 
 #switch button {
-   /* background: color image repeat position/size */
-   width: 32px;
-   height: 32px;
-   background: white var(--bg-switch) no-repeat center;
-   border: 0;
-   border-radius: 50%;
-   
-   position: absolute;
-   top: 50%;
-   left: 0;
-   z-index: 1;
-   transform: translateY(-50%);
+  /* background: color image repeat position/size */
+  width: 32px;
+  height: 32px;
+  background: white var(--bg-switch) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
 }
 .light #switch button {
   left: initial;
@@ -129,7 +130,7 @@ ul li a {
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  
+
   text-decoration: none; /* remove os estilos de uma tag a*/
   font-weight: 500;
 
