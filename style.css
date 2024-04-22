@@ -30,6 +30,7 @@
 body {
   /* background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center;
+  height: 100vh;
 }
 
 body * {
@@ -166,4 +167,13 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries -só funcionam se há a linha de viewport no html:
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  serve para trocar o fundo quando a largura for de 700px para cima. 
+  Neste caso está a mesma url lá de cima, mas poderia ser outra.*/
+@media (min-width: 700px) {
+  :root { --bg-url: url(./assets/bg-desktop.jpg); }
+  .light { --bg-url: url(./assets/bg-desktop-light.jpg); }
 }
